@@ -3,10 +3,12 @@ import './App.css';
 import OldSignupForm from './components/SignupForm/SignupForm';
 import OldColorPicker from './components/ColorPicker/ColorPicker';
 import OldCounter from './components/Counter/Counter';
+import OldClock from './components/Clock/Clock';
 
 function App() {
   return (
     <div className="App">
+      <OldClock />
       <OldCounter />
       <OldSignupForm />
       <OldColorPicker options={colorPickerOptions} />
