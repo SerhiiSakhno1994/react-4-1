@@ -24,10 +24,10 @@ export default function Clock() {
   return (
     <div className={styles.container}>
       <p className={styles.clockface}>
-        Текущее время: {time.toLocaleTimeString()}
+        Поточний час: {time.toLocaleTimeString()}
       </p>
       <button type="button" onClick={stop}>
-        Остановить
+        Зупинити
       </button>
     </div>
   );

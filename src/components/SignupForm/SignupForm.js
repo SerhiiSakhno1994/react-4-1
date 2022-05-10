@@ -37,7 +37,7 @@ export default function SignupForm() {
   return (
     <form className={styles.form} autoComplete="off" onSubmit={handleSubmit}>
       <label className={styles.label}>
-        <span>Почта</span>
+        <span>Пошта</span>
         <input
           type="email"
           name="email"
@@ -54,7 +54,7 @@ export default function SignupForm() {
           value={password}
         />
       </label>
-      <button type="submit">Зарегистрироваться</button>
+      <button type="submit">Зареєструватися</button>
     </form>
   );
 }

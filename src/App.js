@@ -1,22 +1,37 @@
 import './App.css';
 
-import OldSignupForm from './components/SignupForm/SignupForm';
-import OldColorPicker from './components/ColorPicker/ColorPicker';
-import OldCounter from './components/Counter/Counter';
-import OldClock from './components/Clock/Clock';
+import { Routes, Route } from 'react-router-dom';
+import SignupForm from './components/SignupForm/SignupForm';
+import ColorPicker from './components/ColorPicker/ColorPicker';
+import Counter from './components/Counter/Counter';
+import Clock from './components/Clock/Clock';
+import AppBar from './components/AppBar/AppBar';
 
-function App() {
+const containerStyles = {
+  maxWidth: 1170,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: 15,
+  paddingRight: 15,
+};
+
+export default function App() {
   return (
-    <div className="App">
-      <OldClock />
-      <OldCounter />
-      <OldSignupForm />
-      <OldColorPicker options={colorPickerOptions} />
+    <div style={containerStyles}>
+      <AppBar />
+
+      <Routes>
+        <Route path="/signup" element={<SignupForm />} />
+        <Route
+          path="/colorpicker"
+          element={<ColorPicker options={colorPickerOptions} />}
+        />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/clock" element={<Clock />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
